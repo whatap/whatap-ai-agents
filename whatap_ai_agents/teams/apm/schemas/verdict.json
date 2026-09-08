@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["conclusion", "confidence", "evidence"],
+  "properties": {
+    "conclusion": {
+      "type": "string",
+      "description": "무엇이 원인인지 한 문장. 특정하지 못했으면 특정하지 못했다고 쓴다."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "결론에 대한 신뢰도. 0.7 미만이면 원인 미특정으로 다룬다."
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "fact"],
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "도구가 돌려준 증거의 식별자. LLM 이 만들어낸 값이면 안 된다."
+          },
+          "fact": {
+            "type": "string",
+            "description": "그 증거가 말하는 사실. 기준선 대비 변화로 서술한다."
+          }
+        }
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "원인을 특정하지 못했을 때 다음에 확인할 것."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "whatap-ai-agents"
+version = "0.1.0"
+description = "와탭 AI 에이전트 - 팀별 에이전트 선언과 도구 구현"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+authors = [{ name = "WhaTap Labs" }]
+
+# 이 패키지가 런타임에 의존한다. 방향은 항상 단방향이다 - 런타임은 이 패키지를
+# 이름으로도 알지 못한다.
+#
+# 아직 사내 인덱스에 올리지 않았으므로 개발 중에는 로컬 경로로 설치한다:
+#     pip install -e ../whatap-ai-runtime
+#     pip install -e .
+# 여기에 git URL 을 박지 않는 이유는 설치할 때마다 저장소 접근 권한을 요구하게 되고,
+# 런타임을 같이 고치는 개발 흐름에서 로컬 경로가 항상 필요하기 때문이다.
+dependencies = [
+    "whatap-ai-runtime>=0.1.0",
+]
+
+# md 선언과 JSON Schema 는 패키지에 실려야 한다. 설치된 패키지에서 런타임이
+# importlib.resources 로 찾아 읽기 때문이다. hatchling 은 패키지 디렉토리 아래
+# 파일을 종류 구분 없이 담으므로 별도 설정이 필요 없다.
+[tool.hatch.build.targets.wheel]
+packages = ["whatap_ai_agents"]
