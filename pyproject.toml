@@ -28,3 +28,7 @@ dependencies = [
 # 파일을 종류 구분 없이 담으므로 별도 설정이 필요 없다.
 [tool.hatch.build.targets.wheel]
 packages = ["whatap_ai_agents"]
+# 편집 설치 때 프로젝트 디렉토리를 sys.path 에 넣는다. hatchling 기본 모드는 설치
+# 시점의 파일 맵을 고정해서, 그 뒤에 추가한 하위 모듈이 import 되지 않는다 - 모듈을
+# 하나 만들 때마다 재설치해야 하고, 잊으면 "방금 만든 모듈이 없다" 는 말을 듣는다.
+dev-mode-dirs = ["."]
