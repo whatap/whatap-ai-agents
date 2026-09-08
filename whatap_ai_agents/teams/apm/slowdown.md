@@ -1,6 +1,7 @@
 ---
 description: 응답시간이 느려진 원인을 기준선 대비 delta 로 좁힌다. 대상과 시간대를 받아 조사한다.
-max_steps: 20
+tools: [transaction_delta, wait_breakdown]
+max_steps: 8
 output_schema: schemas/verdict.json
 labels:
   operation_type: rca
@@ -11,8 +12,9 @@ labels:
 ## 절차
 
 1. 받은 범위(대상·시간대)에서 무엇이 기준선 대비 얼마나 벗어났는지 본다.
-2. 벗어난 것이 있으면 **한 단계씩 좁힌다.** 애플리케이션 → 트랜잭션 → 그 트랜잭션이
-   무엇을 기다렸는지. 한 번에 결론으로 뛰지 마라.
+2. 벗어난 것이 있으면 **한 단계씩 좁힌다.** `transaction_delta` 로 어느 트랜잭션인지
+   찾고, 그 다음 `wait_breakdown` 으로 그 트랜잭션이 무엇을 기다렸는지 본다. 한 번에
+   결론으로 뛰지 마라.
 3. 좁혀지지 않으면 좁혀지지 않았다고 말한다.
 
 ## 판정 기준
