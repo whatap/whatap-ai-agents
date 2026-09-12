@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["candidates"],
+  "properties": {
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kql", "explanation", "confidence"],
+        "properties": {
+          "kql": {
+            "type": "string",
+            "description": "A valid KQL (kuery) query string using ONLY the field names given to you. Empty string if the request cannot be expressed over these fields."
+          },
+          "explanation": {
+            "type": "string",
+            "description": "One short sentence, in the answer language, explaining what this query matches."
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "How confident you are that this query matches the intent. Use 'low' when the request is vague or the fields don't clearly support it."
+          }
+        }
+      }
+    }
+  }
+}
