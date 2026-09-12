@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "findings": {
+      "items": {
+        "properties": {
+          "category": {
+            "description": "The category this PII came from, copied verbatim from the [category|skey] prefix of the sample line.",
+            "type": "string"
+          },
+          "matchCount": {
+            "description": "Your best-guess count of how many of the shown samples for this field contained this PII. The caller recomputes an exact count from the full field values whenever your regex validates, so this is only a fallback estimate used when no regex validates.",
+            "type": "integer"
+          },
+          "piiType": {
+            "description": "Short lower_snake_case PII category label, e.g. person_name, address, email, ip, phone, rrn, card, account_id, session_token, unknown_token.",
+            "type": "string"
+          },
+          "regex": {
+            "description": "A RE2-compatible regex (also valid in Java/JS: no lookaround, no backreferences) that matches this PII substring within the field value. It MUST match the strings you put in sampleValues. Prefer a general pattern over a literal. Omit (empty string) only when no reliable regex is possible — the finding is still reported, just without an auto-apply regex.",
+            "type": "string"
+          },
+          "sampleValues": {
+            "description": "Up to 3 example matched substrings, taken verbatim from the samples (caller will mask them before returning to the client). Used only as a fallback when no validated regex is available.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "skey": {
+            "description": "Structured field name the PII appears in, copied verbatim from the [category|skey] prefix, or empty string \"\" for free-text body content.",
+            "type": "string"
+          },
+          "suggestedSubstitution": {
+            "description": "A short safe replacement value for this PII type, e.g. \"***\" or a category placeholder.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "skey",
+          "piiType",
+          "matchCount",
+          "sampleValues",
+          "suggestedSubstitution"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "findings"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}
