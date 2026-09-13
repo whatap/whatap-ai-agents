@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "severity",
+    "summary",
+    "findings",
+    "recommendations"
+  ],
+  "properties": {
+    "severity": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "warning",
+        "critical"
+      ],
+      "description": "보고서 전체 심각도. findings 중 가장 높은 것을 반영한다."
+    },
+    "summary": {
+      "type": "string",
+      "description": "보고서 전체에 대한 한 문장 결론."
+    },
+    "findings": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "severity",
+          "text",
+          "evidence"
+        ],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "warning",
+              "normal"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "description": "발견 내용. 구체 수치를 포함하고 강조는 ** 로. 2문장 이내."
+          },
+          "evidence": {
+            "type": "string",
+            "description": "근거가 된 표/차트 이름. 보고서에 실제로 있는 명칭만."
+          }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "string"
+      },
+      "description": "권장 조치. 각 1문장. 없으면 빈 배열."
+    }
+  }
+}
