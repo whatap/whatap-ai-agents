@@ -10,12 +10,19 @@
 ## 구조
 
 ```
-whatap_ai_agents/teams/
-  apm/                    팀 = 디렉토리
-    master.md             팀 진입점 (이 이름은 규약이다)
-    slowdown.md           같은 팀의 다른 에이전트
-    schemas/              output_schema 가 가리키는 JSON Schema
+whatap_ai_agents/
+  teams/                  채팅 에이전트
+    apm/                  팀 = 디렉토리
+      master.md           팀 진입점 (이 이름은 규약이다)
+      slowdown.md         같은 팀의 다른 에이전트
+      schemas/            output_schema 가 가리키는 JSON Schema
+  v1/extra/teams/         단발 분석(oneshot) 에이전트
+    log/  report/  dpm/
 ```
+
+**이름이 `teams` 인 디렉토리는 전부 카탈로그 루트**이고 런타임이 하나로 합친다. 그래서
+어디에 묶어 두든 **에이전트 이름은 바뀌지 않는다** — 이름은 `teams` 아래의 `<팀>/<파일>`
+만 본다. 같은 이름이 두 루트에 있으면 기동 시점에 터진다.
 
 도구는 이 저장소에 없다. AI Backend 가 구현하고, 런타임이 시작할 때 백엔드에 목록을
 물어 등록한다. md 의 `tools:` 는 **그 도구의 이름을 가리키는 것**이고, 없는 이름을
@@ -79,6 +86,13 @@ frontmatter 를 이해할 수 없다
   판정이 아니다. 기준선 대비 delta 와 정상범위로만 말하게 한다.
 - **못 찾았으면 못 찾았다고 하게 한다.** 근거 없는 결론보다 낮은 신뢰도와 다음 확인
   항목이 낫다.
+
+## 모델은 논리 이름으로만 쓴다
+
+`model:` 에 실제 모델명(`claude-sonnet-5`, bedrock id …)을 적지 말 것. 백엔드(argus)가
+`LLMGW_MODELS` 로 논리 이름 → 실제 모델을 고르고, 그래야 모델 교체·A/B 가 **이 레포 배포
+없이** 된다. 실제 이름을 박으면 모델 풀이 다른 배포(온프렘 등)에서 그 에이전트만 404 로
+죽는다. 대부분은 `model:` 을 아예 안 쓰는 것이 맞다 — 런타임 기본값으로 간다.
 
 ## 개발 환경
 
