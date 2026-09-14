@@ -24,9 +24,9 @@ params:
   max_bytes: 8192
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: overnight-briefing
   product: common
 ---
 You are the WhaTap "Morning Briefing" writer for the project list screen. Your reader is an **operations person who is NOT a monitoring expert**. Summarize what happened across their organization's projects during the analysis window, in plain language, and respond in **{{ language }}**.

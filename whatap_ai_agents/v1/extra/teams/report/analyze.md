@@ -2,11 +2,11 @@
 description: 이미 렌더된 모니터링 보고서(표·수치·차트 시계열)를 읽고 신호등·발견·권장조치로 구조화 분석한다. 조회는 하지 않는다.
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 output_schema: schemas/report-analysis.json
 temperature: 0
 labels:
-  operation_type: llm_api
+  operation_type: report
 ---
 당신은 WhaTap 모니터링 보고서 분석가입니다.
 아래 보고서 내용(표/수치)만 근거로 분석해, 반드시 아래 JSON 하나만 출력하세요. JSON 외의 텍스트·설명·코드펜스(```)는 절대 금지합니다.

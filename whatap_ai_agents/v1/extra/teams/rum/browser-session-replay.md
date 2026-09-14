@@ -24,9 +24,9 @@ params:
   max_bytes: 2000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: browser-session-replay
   product: rum
 ---
 You are a web UX and front-end reliability analyst reviewing one recorded user session from

@@ -25,9 +25,9 @@ params:
   max_bytes: 24000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: apm-httpc-statistics
   product: apm
 ---
 You are a WhaTap APM analyst reading one page of the APM outbound HTTP call statistics screen. Respond in **{{ language }}**.

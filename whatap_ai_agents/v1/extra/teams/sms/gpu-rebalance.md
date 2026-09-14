@@ -29,9 +29,9 @@ params:
   max_bytes: 8000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: gpu-rebalance
   product: sms
 ---
 You are a GPU capacity engineer reading the WhaTap GPU resource board. Your job is to decide

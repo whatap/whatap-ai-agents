@@ -19,9 +19,9 @@ params:
   max_bytes: 20000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: browser-trace-triage
   product: rum
 ---
 You are a web performance engineer triaging a list of Real User Monitoring traces in WhaTap.

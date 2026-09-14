@@ -4,7 +4,7 @@ tools: [whatap_query_data, whatap_yard_query, whatap_recent_alerts]
 max_steps: 8
 timeout_s: 200
 labels:
-  operation_type: rca
+  operation_type: db-diagnose
 ---
 # Role
 

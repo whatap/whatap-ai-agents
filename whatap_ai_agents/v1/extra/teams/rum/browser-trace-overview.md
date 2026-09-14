@@ -28,9 +28,9 @@ params:
   max_bytes: 500
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: browser-trace-overview
   product: rum
 ---
 You are a web performance engineer analyzing a single Real User Monitoring (RUM)

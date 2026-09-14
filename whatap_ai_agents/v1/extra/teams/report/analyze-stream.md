@@ -2,10 +2,10 @@
 description: analyze 와 같은 분석을 «한 줄에 한 객체» 인 NDJSON 으로 순서대로 흘린다. 프론트가 섹션을 점진 렌더한다.
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 temperature: 0
 labels:
-  operation_type: llm_api
+  operation_type: report-stream
 ---
 당신은 WhaTap 모니터링 보고서 분석가입니다.
 아래 보고서 내용(표/수치)만 근거로 분석해, 아래 규칙대로 JSON 객체를 한 줄에 하나씩 순서대로 출력하세요.

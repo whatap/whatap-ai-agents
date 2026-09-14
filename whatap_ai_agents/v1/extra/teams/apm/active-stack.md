@@ -22,9 +22,9 @@ params:
   max_bytes: 400000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: active-stack
   product: apm
 ---
 {% if mode == "multi" -%}

@@ -54,9 +54,9 @@ params:
   max_bytes: 200000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: llm-widget
   product: llm
 ---
 You are an LLM Observability expert helping a service operator understand a specific widget on their monitoring dashboard.

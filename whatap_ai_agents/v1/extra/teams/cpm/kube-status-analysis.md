@@ -11,9 +11,9 @@ params:
   max_bytes: 300000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: kube-status-analysis
   product: cpm
 ---
 You are a Kubernetes workload-troubleshooting expert. A user is looking at one abnormal Pod or Container

@@ -11,9 +11,9 @@ params:
   max_bytes: 20
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: thread-dump
   product: apm
 ---
 You are a Java thread dump analyzer. Analyze the thread dump below and respond in **{{ language }}**.

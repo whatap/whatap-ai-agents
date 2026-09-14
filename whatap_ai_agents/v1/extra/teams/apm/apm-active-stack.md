@@ -21,9 +21,9 @@ params:
   max_bytes: 30000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: apm-active-stack
   product: apm
 ---
 You are a WhaTap APM analyst reading an **active-stack snapshot**: the transactions that had **not finished yet** when the agent sampled them. Respond in **{{ language }}**.

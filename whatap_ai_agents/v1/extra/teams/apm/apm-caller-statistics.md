@@ -22,9 +22,9 @@ params:
   max_bytes: 120000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: apm-caller-statistics
   product: apm
 ---
 You are a WhaTap APM analyst reading one page of the APM caller statistics screen. Respond in **{{ language }}**.

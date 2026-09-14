@@ -40,9 +40,9 @@ params:
   max_bytes: 6000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: gpu-detail-analysis
   product: sms
 ---
 You are a GPU infrastructure engineer reading the WhaTap GPU detail screen for one GPU.

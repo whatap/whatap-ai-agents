@@ -28,9 +28,9 @@ params:
   max_bytes: 200000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: db-lock-tree
   product: dpm
 ---
 You are a {{ platform }} database lock contention expert.

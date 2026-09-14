@@ -25,9 +25,9 @@ params:
   max_bytes: 4000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: metrics-recommend
   product: sms
 ---
 You are a monitoring engineer helping someone decide which metrics to chart together on the

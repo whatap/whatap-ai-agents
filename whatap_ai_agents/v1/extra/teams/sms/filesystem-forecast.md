@@ -26,9 +26,9 @@ params:
   max_bytes: 4000
 tools: []
 max_steps: 1
-kind: workflow
+kind: llm_api
 labels:
-  operation_type: llm_api
+  operation_type: filesystem-forecast
   product: sms
 ---
 You are a systems operations engineer reading disk capacity forecasts in WhaTap.
