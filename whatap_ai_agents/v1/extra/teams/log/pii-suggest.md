@@ -2,7 +2,7 @@
 description: 로그 샘플의 필드 다이제스트를 보고 PII(개인정보)를 짚는다. 필드 이름과 샘플 값의 문맥으로 판단하고, 가능하면 적용할 regex 까지 제안한다.
 tools: []
 max_steps: 1
-kind: llm_api
+kind: workflow
 output_schema: schemas/pii-findings.json
 temperature: 0
 labels:

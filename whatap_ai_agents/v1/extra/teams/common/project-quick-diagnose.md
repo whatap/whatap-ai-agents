@@ -24,7 +24,7 @@ params:
   max_bytes: 1024
 tools: []
 max_steps: 1
-kind: llm_api
+kind: workflow
 labels:
   operation_type: project-quick-diagnose
   product: common

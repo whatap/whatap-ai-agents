@@ -32,7 +32,7 @@ params:
   max_bytes: 6000
 tools: []
 max_steps: 1
-kind: llm_api
+kind: workflow
 labels:
   operation_type: server-triage
   product: sms

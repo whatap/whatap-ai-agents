@@ -14,7 +14,7 @@ params:
   max_bytes: 300000
 tools: []
 max_steps: 1
-kind: llm_api
+kind: workflow
 labels:
   operation_type: db-plan-tuning
   product: dpm

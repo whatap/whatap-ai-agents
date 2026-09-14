@@ -2,7 +2,7 @@
 description: analyze 와 같은 분석을 «한 줄에 한 객체» 인 NDJSON 으로 순서대로 흘린다. 프론트가 섹션을 점진 렌더한다.
 tools: []
 max_steps: 1
-kind: llm_api
+kind: workflow
 temperature: 0
 labels:
   operation_type: report-stream

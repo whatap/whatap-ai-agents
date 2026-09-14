@@ -22,7 +22,7 @@ params:
   max_bytes: 20000
 tools: []
 max_steps: 1
-kind: llm_api
+kind: workflow
 labels:
   operation_type: apm-trace-list
   product: apm

@@ -2,7 +2,7 @@
 description: 로그 탐색 검색창의 자연어 요청을 KQL 후보 쿼리로 옮긴다. 필드 스키마와 사용자의 문장만 보고 만들며 로그를 조회하지 않는다.
 tools: []
 max_steps: 1
-kind: llm_api
+kind: workflow
 output_schema: schemas/query-candidates.json
 temperature: 0
 labels:

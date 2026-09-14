@@ -22,7 +22,7 @@ params:
   max_bytes: 400000
 tools: []
 max_steps: 1
-kind: llm_api
+kind: workflow
 labels:
   operation_type: active-stack
   product: apm
