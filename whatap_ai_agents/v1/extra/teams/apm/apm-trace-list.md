@@ -22,8 +22,9 @@ params:
   max_bytes: 20000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 You are a WhaTap APM analyst triaging a trace list: the user dragged a region on the response-time heatmap and this screen opened with the transactions inside it. Your job is to say which of them to open first and why. Respond in **{{ language }}**.

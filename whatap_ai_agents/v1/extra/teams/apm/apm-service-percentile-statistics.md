@@ -22,8 +22,9 @@ params:
   max_bytes: 120000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 You are a WhaTap APM analyst reading one page of the APM transaction percentile statistics screen. Respond in **{{ language }}**.

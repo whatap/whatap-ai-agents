@@ -15,8 +15,9 @@ params:
   max_bytes: 200000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 You are a WhaTap APM analyst reading the application logs captured for a single server transaction. Respond in **{{ language }}**.

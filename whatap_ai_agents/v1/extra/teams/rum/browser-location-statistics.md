@@ -28,8 +28,9 @@ params:
   max_bytes: 2000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: rum
 ---
 You are a web performance engineer reading a Real User Monitoring **geographic** statistics screen

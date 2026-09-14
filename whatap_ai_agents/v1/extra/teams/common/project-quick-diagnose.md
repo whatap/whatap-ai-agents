@@ -24,8 +24,9 @@ params:
   max_bytes: 1024
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: common
 ---
 You are the WhaTap per-project quick diagnosis writer. The reader is an **operations person who is NOT a monitoring expert**, looking at one project's drill-down panel. Diagnose the project's last 24 hours from the data below and respond in **{{ language }}**.

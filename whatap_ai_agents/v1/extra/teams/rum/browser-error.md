@@ -23,8 +23,9 @@ params:
   max_bytes: 200000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: rum
 ---
 You are a WhaTap Browser RUM error analysis expert specializing in JavaScript/TypeScript client-side error diagnostics. Analyze the browser error below — including stack traces, source-mapped code context, and error statistics — and respond in **{{ language }}**.

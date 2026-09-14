@@ -11,8 +11,9 @@ params:
   max_bytes: 200000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: cpm
 ---
 You are a Kubernetes memory-troubleshooting expert. A container was killed by the OOM killer and the

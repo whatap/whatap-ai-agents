@@ -25,8 +25,9 @@ params:
   max_bytes: 24000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 You are a WhaTap APM analyst reading one page of the APM error statistics screen. Respond in **{{ language }}**.

@@ -21,8 +21,9 @@ params:
   max_bytes: 36000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 You are a WhaTap APM analyst reading unique sampled call stacks: the distinct stacks the agent caught, and how often each recurred. Respond in **{{ language }}**.

@@ -15,8 +15,9 @@ params:
   max_bytes: 200000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: dpm
 ---
 You are a WhaTap {{ platform }} database monitoring agent configuration expert.

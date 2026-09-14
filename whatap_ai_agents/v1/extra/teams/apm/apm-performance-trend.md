@@ -19,8 +19,9 @@ params:
   max_bytes: 30000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 You are a WhaTap APM analyst reading performance trends for an application over a time range: you are looking for the moments that stand out and what moved together. Respond in **{{ language }}**.

@@ -24,8 +24,9 @@ params:
   max_bytes: 2000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: rum
 ---
 You are a web UX and front-end reliability analyst reviewing one recorded user session from

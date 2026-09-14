@@ -22,8 +22,9 @@ params:
   max_bytes: 400000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 {% if mode == "multi" -%}

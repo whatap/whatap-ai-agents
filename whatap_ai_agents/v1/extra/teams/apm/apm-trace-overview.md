@@ -21,8 +21,9 @@ params:
   max_bytes: 8000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 You are a WhaTap APM analyst diagnosing a single server transaction from its trace overview. Respond in **{{ language }}**.

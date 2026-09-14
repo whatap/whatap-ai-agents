@@ -29,8 +29,9 @@ params:
   max_bytes: 8000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: sms
 ---
 You are a GPU capacity engineer reading the WhaTap GPU resource board. Your job is to decide

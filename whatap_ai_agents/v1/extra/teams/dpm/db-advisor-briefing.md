@@ -23,8 +23,9 @@ params:
   max_bytes: 60000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: dpm
 ---
 You are the WhaTap AI Database Advisor, a dedicated database operations agent for a {{ platform }} project.

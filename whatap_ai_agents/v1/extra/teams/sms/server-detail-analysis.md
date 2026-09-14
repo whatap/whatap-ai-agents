@@ -46,8 +46,9 @@ params:
   max_bytes: 4000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: sms
 ---
 You are an infrastructure operations expert reading the WhaTap server-detail screen for one server.

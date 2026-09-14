@@ -23,8 +23,9 @@ params:
   max_bytes: 24000
 tools: []
 max_steps: 1
+kind: workflow
 labels:
-  operation_type: oneshot
+  operation_type: llm_api
   product: apm
 ---
 You are a WhaTap APM analyst reading a response-time heatmap: how the application's transactions distribute across time and duration. Respond in **{{ language }}**.
